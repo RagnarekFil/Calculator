@@ -89,7 +89,7 @@ public class Main {
         }
         else {
             int count = 0;
-            for (int i = 1; i <= 100; i++) {
+            for (int i = 1; i <= 10; i++) {
                 if (num1.equals(romanNumbers[i])) {
                     lValue = i;
                     count ++;
@@ -98,12 +98,15 @@ public class Main {
                     rValue = i;
                     count ++;
                 }
-                if (count == 2){
-                    break;
-                }
             }
-            if(arithmeticOperations(lValue, rValue, operator) >= 1){
-                return romanNumbers[arithmeticOperations(lValue, rValue, operator)];
+            System.out.println(count);
+            if (count == 2){
+                if(arithmeticOperations(lValue, rValue, operator) >= 1){
+                    return romanNumbers[arithmeticOperations(lValue, rValue, operator)];
+                }
+                else{
+                    throw new Exception();
+                }
             }
             else{
                 throw new Exception();
