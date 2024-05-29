@@ -99,7 +99,6 @@ public class Main {
                     count ++;
                 }
             }
-            System.out.println(count);
             if (count == 2){
                 if(arithmeticOperations(lValue, rValue, operator) >= 1){
                     return romanNumbers[arithmeticOperations(lValue, rValue, operator)];
